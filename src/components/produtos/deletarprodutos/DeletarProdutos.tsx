@@ -49,7 +49,7 @@ function DeletarProduto() {
                         <p className='text-2xl h-full text-center'>{produto.nome}</p>
                     </div>
                     <div className="flex">
-                        <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornarManipulação}>Não</button>
+                        <button onClick={retornarManipulação} className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'> Não</button>
                         <button className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' onClick={deletarProduto}>
                             Sim
                         </button>

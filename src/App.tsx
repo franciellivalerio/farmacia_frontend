@@ -10,7 +10,6 @@ import ListarProdutos from './components/produtos/listarprodutos/ListarProdutos'
 import FormProdutos from './components/produtos/formprodutos/FormProdutos';
 import DeletarProdutos from './components/produtos/deletarprodutos/DeletarProdutos';
 import { ToastContainer } from 'react-toastify';
-import Footer from './components/footer/Footer';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -32,7 +31,6 @@ function App() {
             <Route path="/deletarprodutos/:id" element={<DeletarProdutos />} />
           </Routes>
         </div>
-        <Footer />
       </BrowserRouter>
     </>
   );

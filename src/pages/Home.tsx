@@ -1,3 +1,4 @@
+import Footer from "../components/footer/Footer"
 import ListarProdutos from "../components/produtos/listarprodutos/ListarProdutos"
 
 
@@ -24,7 +25,7 @@ function Home() {
                 </div>
             </div>
             <ListarProdutos />
-            
+            <Footer />
             
         </>
     )

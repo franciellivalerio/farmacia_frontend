@@ -9,10 +9,14 @@ import DeletarCategoria from './components/categorias/deletar categorias/Deletar
 import ListarProdutos from './components/produtos/listarprodutos/ListarProdutos';
 import FormProdutos from './components/produtos/formprodutos/FormProdutos';
 import DeletarProdutos from './components/produtos/deletarprodutos/DeletarProdutos';
+import { ToastContainer } from 'react-toastify';
+import Footer from './components/footer/Footer';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
+    <ToastContainer />
       <BrowserRouter>
         <Navbar />
         <div className='min-h-[90vh]'>
@@ -26,10 +30,9 @@ function App() {
             <Route path="/cadprodutos" element={<FormProdutos />} />
             <Route path="/editarprodutos/:id" element={<FormProdutos />} />
             <Route path="/deletarprodutos/:id" element={<DeletarProdutos />} />
-            
-
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </>
   );

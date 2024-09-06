@@ -1,32 +1,35 @@
-import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
-
+import { FacebookLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react"
 
 function Footer() {
-
-
-    let footerComponent
-
-    let data = new Date().getFullYear();
-
-    <>
-        <div className="flex justify-center bg-cyan-500 text-white">
-            <div className="container flex flex-col items-center py-4">
-                <p className='text-xl font-bold'>Calm Pharmacy | Copyright: {data}</p>
-                <p className='text-lg'>Acesse nossas redes sociais</p>
-                <div className='flex gap-2'>
-                    <LinkedinLogo size={48} weight='bold' />
-                    <InstagramLogo size={48} weight='bold' />
-                    <FacebookLogo size={48} weight='bold' />
-                </div>
-            </div>
-        </div>
-    </>
+    let data = new Date().getFullYear()
 
     return (
-    <>
-    {footerComponent}
-    </>
+        <>
+            <div className="flex justify-center bg-cyan-800 text-white">
+                <div className="container flex justify-around items-center py-4">
+                    <div>
+                    <p className='text-xl font-bold'>
+                        CALM PHARMACY | Copyright: {data}
+                    </p>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                        <p className='text-lg'>Acesse nossas redes sociais</p>
+                        <div className='flex gap-2'>
+                            <a href="" target="_blank">
+                                <LinkedinLogo size={48} weight='bold' />
+                            </a>
+                            <a href="" target="_blank">
+                                <InstagramLogo size={48} weight='bold' />
+                            </a>
+                            <a href="" target="_blank">
+                                <FacebookLogo size={48} weight='bold' />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
     )
-    }
-    
-    export default Footer
+}
+
+export default Footer

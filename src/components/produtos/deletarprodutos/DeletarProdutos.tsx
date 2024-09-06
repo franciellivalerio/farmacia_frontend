@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom"
 import { buscar, deletar } from "../../../service/Service"
 import Produto from "../../../models/Produto"
 import { toastAlerta } from "../../../utils/ToastAlerta"
-import Home from "../../../pages/Home"
 
 function DeletarProduto() {
     const [produto, setProduto] = useState<Produto>({} as Produto)
@@ -50,7 +49,7 @@ function DeletarProduto() {
                         <p className='text-2xl h-full text-center'>{produto.nome}</p>
                     </div>
                     <div className="flex">
-                        <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={Home}>Não</button>
+                        <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornarManipulação}>Não</button>
                         <button className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' onClick={deletarProduto}>
                             Sim
                         </button>

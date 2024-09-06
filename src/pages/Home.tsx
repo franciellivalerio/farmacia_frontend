@@ -1,4 +1,4 @@
-import ListarCategorias from "../components/categorias/listarcategorias/ListarCategorias"
+import ListarProdutos from "../components/produtos/listarprodutos/ListarProdutos"
 
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <ListarCategorias />
+            <ListarProdutos />
             
             
         </>

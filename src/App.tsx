@@ -6,6 +6,9 @@ import ListarCategorias from './components/categorias/listarcategorias/ListarCat
 import Home from './pages/Home';
 import FormCategoria from './components/categorias/formcategorias/FormCategorias';
 import DeletarCategoria from './components/categorias/deletar categorias/DeletarCategorias';
+import ListarProdutos from './components/produtos/listarprodutos/ListarProdutos';
+import FormProdutos from './components/produtos/formprodutos/FormProdutos';
+import DeletarProdutos from './components/produtos/deletarprodutos/DeletarProdutos';
 
 function App() {
   return (
@@ -19,6 +22,12 @@ function App() {
             <Route path="/cadcategorias" element={<FormCategoria />} />
             <Route path="/editarcategoria/:id" element={<FormCategoria />} />
             <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+            <Route path="/produtos" element={<ListarProdutos />} />
+            <Route path="/cadprodutos" element={<FormProdutos />} />
+            <Route path="/editarprodutos/:id" element={<FormProdutos />} />
+            <Route path="/deletarprodutos/:id" element={<DeletarProdutos />} />
+            
+
           </Routes>
         </div>
       </BrowserRouter>

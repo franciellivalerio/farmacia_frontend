@@ -9,7 +9,7 @@ function Footer() {
     let data = new Date().getFullYear();
 
     <>
-        <div className="flex justify-center bg-cyan-800 text-white">
+        <div className="flex justify-center bg-cyan-500 text-white">
             <div className="container flex flex-col items-center py-4">
                 <p className='text-xl font-bold'>Calm Pharmacy | Copyright: {data}</p>
                 <p className='text-lg'>Acesse nossas redes sociais</p>

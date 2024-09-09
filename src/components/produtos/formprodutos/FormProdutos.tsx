@@ -4,7 +4,7 @@ import { atualizar, buscar, cadastrar } from "../../../service/Service";
 import Categoria from "../../../models/Categorias";
 import Produto from "../../../models/Produto";
 import { RotatingLines } from "react-loader-spinner";
-import { toastAlerta } from "../../../utils/ToastAlerta";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function FormProdutos() {
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ function FormProdutos() {
         try {
             await buscar(`/produtos/${id}`, setProduto)
         } catch (error: any) {
-            toastAlerta('Erro ao buscar produtos por ID!', "Erro")
+            ToastAlerta('Erro ao buscar produtos por ID!', "Erro")
         }
     }
 
@@ -29,7 +29,7 @@ function FormProdutos() {
         try {
             await buscar(`/categorias/${id}`, setCategoria)
         } catch (error: any) {
-            toastAlerta('Erro ao buscar categorias por ID!', "Erro")
+            ToastAlerta('Erro ao buscar categorias por ID!', "Erro")
         }
     }
 
@@ -37,7 +37,7 @@ function FormProdutos() {
         try {
             await buscar('/categorias', setCategorias)
         } catch (error: any) {
-            toastAlerta('Erro ao buscar categorias!', "Erro")
+            ToastAlerta('Erro ao buscar categorias!', "Erro")
         }
     }
 
@@ -75,19 +75,19 @@ function FormProdutos() {
         if (id !== undefined) {
             try {
                 await atualizar(`/produtos`, produto, setProduto);
-                toastAlerta('Produto atualizado com sucesso', 'Sucesso')
+                ToastAlerta('Produto atualizado com sucesso', 'Sucesso')
 
             } catch (error: any) {
-                toastAlerta('Erro ao atualizar o Produto', 'Erro')
+                ToastAlerta('Erro ao atualizar o Produto', 'Erro')
             }
 
         } else {
             try {
                 await cadastrar(`/produtos`, produto, setProduto)
-                toastAlerta('Produto cadastrado com sucesso', 'Sucesso');
+                ToastAlerta('Produto cadastrado com sucesso', 'Sucesso');
 
             } catch (error: any) {
-                toastAlerta('Erro ao cadastrar o Produto', 'Erro');
+                ToastAlerta('Erro ao cadastrar o Produto', 'Erro');
             }
         }
 

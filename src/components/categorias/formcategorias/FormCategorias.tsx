@@ -2,6 +2,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { atualizar, buscar, cadastrar } from "../../../service/Service";
 import Categoria from "../../../models/Categorias";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function FormCategoria() {
     const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
@@ -36,21 +37,21 @@ function FormCategoria() {
           try {
              await atualizar(`/categorias`, categoria, setCategoria)
  
-             alert('Categoria atualizada com sucesso')
+             ToastAlerta('Categoria atualizada com sucesso', 'success')
              retornar()
  
           } catch (error: any) {
-             alert('Erro ao atualizar o Tema')
+             ToastAlerta('Erro ao atualizar a Categoria', 'error')
           }
  
        } else {
           try {
              await cadastrar(`/categorias`, categoria, setCategoria)
  
-             alert('Categoria cadastrada com sucesso')
+             ToastAlerta('Categoria cadastrada com sucesso', 'successo')
  
           } catch (error: any) {
-             alert('Erro ao cadastrado o Tema')
+             ToastAlerta('Erro ao cadastrado a Categoria', 'error')
           }
        }
  
